@@ -35,19 +35,23 @@
         </div>
     </div>
      </div>
-    <!-- <script>
-        const wrap = document.querySelector('.wrap');
-        const cards = document.querySelectorAll('.card');
-      
-        cards.forEach(card => {
-           card.addEventListener('mouseover', () => {
-            wrap.style.zIndex = '900';
-          });
-      
-          card.addEventListener('mouseleave', () => {
-            wrap.style.zIndex = '1';
-          });
-        }); -->
-      <!-- </script> -->
+     <script>
+        const  cards = document.querySelectorAll('.card')
+        const  observer = new IntersectionObserver((entries)=>{
+            entries.forEach((entry)=>{
+                if(entry.isIntersecting){
+                    entry.target.classList.add('show')
+                }
+                else{
+                    entry.target.classList.remove('show')
+                }
+            })
+        },{
+            threshold:0.3
+        })
+        cards.forEach(card=>{
+            observer.observe(card)
+        })
+     </script>
 </body>
 </html>
