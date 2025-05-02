@@ -26,6 +26,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
+    flex-direction: row; /* Default: row */
 }
 
 .card {
@@ -35,8 +36,8 @@
     background-repeat: no-repeat;
     background-color: #8BDD18;
     background-size: cover;
-    width: 200px; /* Default size */
-    height: 250px; /* Consistent card height */
+    width: 250px; /* Default size */
+    height: 300px; /* Consistent card height */
     padding: 20px;
     opacity: 0;
     transform: translateX(-100px);
@@ -111,10 +112,10 @@ span {
     padding: 10px;
 }
 
-/* @media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .master-con {
         height: auto;
-        padding-top: 30px;
+        padding-top: 150px;
         justify-content: flex-start;
     }
 
@@ -125,9 +126,9 @@ span {
     }
 
     .card {
-        width: 30%; 
+        width: 45%; /* Adjust for larger tablets/laptops */
         height: 250px;
-        max-width: 300px; 
+        max-width: 300px; /* Prevent stretching */
     }
 
     h2 {
@@ -137,26 +138,26 @@ span {
     .content {
         padding: 12px;
     }
-}*/
+}
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 800px) {
     .master-con {
-        padding-top: 130px;
+        padding-top: 150px;
         padding-bottom: 30px;
         justify-content: flex-start;
-        height: auto;
     }
 
     .card-container {
         gap: 15px;
         height: auto;
         padding: 10px;
+        flex-direction: column; /* Change direction to stack vertically */
     }
 
     .card {
-        width: 45%;
+        width: 100%; /* Make cards full-width */
         height: 250px;
-        max-width: 300px; 
+        max-width: 300px;
     }
 
     h2 {
@@ -165,11 +166,6 @@ span {
 
     .content {
         padding: 10px;
-    }
-}
-@media screen and (max-width:420px){
-    .master-con{
-        padding-top:170px ;
     }
 }
 
@@ -183,23 +179,24 @@ span {
     .card-container {
         gap: 15px;
         height: auto;
-        padding: 10px;
+        padding-top: 130px;
+        flex-direction: column; /* Stack cards vertically */
     }
 
     .card {
-        width: 80%; 
+        width: 100%; /* Full width for smaller screens */
         height: 250px;
         max-width: 300px;
     }
 
     h2 {
-        font-size: 1.4rem; 
+        font-size: 1.4rem; /* Slightly smaller for mobile */
     }
 
     .content {
         padding: 10px;
     }
-} 
+}
 
 .show {
     opacity: 1;
