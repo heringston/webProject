@@ -171,7 +171,7 @@ span {
 
 @media screen and (max-width: 768px) {
     .master-con {
-        padding-top: 20px;
+        padding-top: 80px;
         padding-bottom: 20px;
         justify-content: flex-start;
     }
