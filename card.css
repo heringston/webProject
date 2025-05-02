@@ -172,7 +172,7 @@ span {
         padding-top:170px ;
     }
 }
-/*
+
 @media screen and (max-width: 768px) {
     .master-con {
         padding-top: 20px;
@@ -199,7 +199,7 @@ span {
     .content {
         padding: 10px;
     }
-} */
+} 
 
 .show {
     opacity: 1;
